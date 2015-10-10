@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAB3980E1BC95CCC00D9FFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3980D1BC95CCC00D9FFAE /* AppDelegate.swift */; };
+		BAB398101BC95CCC00D9FFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3980F1BC95CCC00D9FFAE /* ViewController.swift */; };
+		BAB398131BC95CCC00D9FFAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB398111BC95CCC00D9FFAE /* Main.storyboard */; };
+		BAB398161BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB398141BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodeld */; };
+		BAB398181BC95CCC00D9FFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB398171BC95CCC00D9FFAE /* Assets.xcassets */; };
+		BAB3981B1BC95CCC00D9FFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB398191BC95CCC00D9FFAE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BAB3980A1BC95CCC00D9FFAE /* glutenblogPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glutenblogPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB3980D1BC95CCC00D9FFAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAB3980F1BC95CCC00D9FFAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAB398121BC95CCC00D9FFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAB398151BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = glutenblogPlay.xcdatamodel; sourceTree = "<group>"; };
+		BAB398171BC95CCC00D9FFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAB3981A1BC95CCC00D9FFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAB3981C1BC95CCC00D9FFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAB398071BC95CCC00D9FFAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAB398011BC95CCC00D9FFAE = {
+			isa = PBXGroup;
+			children = (
+				BAB3980C1BC95CCC00D9FFAE /* glutenblogPlay */,
+				BAB3980B1BC95CCC00D9FFAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAB3980B1BC95CCC00D9FFAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAB3980A1BC95CCC00D9FFAE /* glutenblogPlay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAB3980C1BC95CCC00D9FFAE /* glutenblogPlay */ = {
+			isa = PBXGroup;
+			children = (
+				BAB3980D1BC95CCC00D9FFAE /* AppDelegate.swift */,
+				BAB3980F1BC95CCC00D9FFAE /* ViewController.swift */,
+				BAB398111BC95CCC00D9FFAE /* Main.storyboard */,
+				BAB398171BC95CCC00D9FFAE /* Assets.xcassets */,
+				BAB398191BC95CCC00D9FFAE /* LaunchScreen.storyboard */,
+				BAB3981C1BC95CCC00D9FFAE /* Info.plist */,
+				BAB398141BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodeld */,
+			);
+			path = glutenblogPlay;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAB398091BC95CCC00D9FFAE /* glutenblogPlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAB3981F1BC95CCC00D9FFAE /* Build configuration list for PBXNativeTarget "glutenblogPlay" */;
+			buildPhases = (
+				BAB398061BC95CCC00D9FFAE /* Sources */,
+				BAB398071BC95CCC00D9FFAE /* Frameworks */,
+				BAB398081BC95CCC00D9FFAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glutenblogPlay;
+			productName = glutenblogPlay;
+			productReference = BAB3980A1BC95CCC00D9FFAE /* glutenblogPlay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAB398021BC95CCC00D9FFAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Thomas Karg";
+				TargetAttributes = {
+					BAB398091BC95CCC00D9FFAE = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = V7D269JMMB;
+					};
+				};
+			};
+			buildConfigurationList = BAB398051BC95CCC00D9FFAE /* Build configuration list for PBXProject "glutenblogPlay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAB398011BC95CCC00D9FFAE;
+			productRefGroup = BAB3980B1BC95CCC00D9FFAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAB398091BC95CCC00D9FFAE /* glutenblogPlay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAB398081BC95CCC00D9FFAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB3981B1BC95CCC00D9FFAE /* LaunchScreen.storyboard in Resources */,
+				BAB398181BC95CCC00D9FFAE /* Assets.xcassets in Resources */,
+				BAB398131BC95CCC00D9FFAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAB398061BC95CCC00D9FFAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB398101BC95CCC00D9FFAE /* ViewController.swift in Sources */,
+				BAB3980E1BC95CCC00D9FFAE /* AppDelegate.swift in Sources */,
+				BAB398161BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BAB398111BC95CCC00D9FFAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAB398121BC95CCC00D9FFAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAB398191BC95CCC00D9FFAE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAB3981A1BC95CCC00D9FFAE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAB3981D1BC95CCC00D9FFAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAB3981E1BC95CCC00D9FFAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAB398201BC95CCC00D9FFAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = glutenblogPlay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karg.glutenblogPlay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BAB398211BC95CCC00D9FFAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = glutenblogPlay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karg.glutenblogPlay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAB398051BC95CCC00D9FFAE /* Build configuration list for PBXProject "glutenblogPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB3981D1BC95CCC00D9FFAE /* Debug */,
+				BAB3981E1BC95CCC00D9FFAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB3981F1BC95CCC00D9FFAE /* Build configuration list for PBXNativeTarget "glutenblogPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB398201BC95CCC00D9FFAE /* Debug */,
+				BAB398211BC95CCC00D9FFAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAB398141BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAB398151BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodel */,
+			);
+			currentVersion = BAB398151BC95CCC00D9FFAE /* glutenblogPlay.xcdatamodel */;
+			path = glutenblogPlay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BAB398021BC95CCC00D9FFAE /* Project object */;
+}
