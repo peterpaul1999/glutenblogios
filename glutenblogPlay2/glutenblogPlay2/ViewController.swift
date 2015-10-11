@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var popOverButton: UIButton!
@@ -68,6 +68,15 @@ class ViewController: UIViewController, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        performSegueWithIdentifier("detailSegue", sender: self)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+    }
+    
+    
 
 }
 

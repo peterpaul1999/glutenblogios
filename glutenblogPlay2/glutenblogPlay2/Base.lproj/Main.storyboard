@@ -175,11 +175,42 @@ Testkategorie</string>
                         <outlet property="popOverButton" destination="NdZ-cm-UnR" id="o5d-rH-irR"/>
                         <outlet property="popOverView" destination="2Nh-x3-OGc" id="u0y-L8-cks"/>
                         <outlet property="tableView" destination="V57-Wa-jPr" id="3bp-kJ-0nQ"/>
+                        <segue destination="Zwu-87-lWY" kind="show" identifier="detailSegue" id="q77-xw-Nms"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="244" y="312"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9rU-kw-0nz">
+            <objects>
+                <viewController id="Zwu-87-lWY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xOm-E5-VLy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ivJ-Q6-Nep"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P98-4S-TOj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJZ-VM-SbT">
+                                <rect key="frame" x="122" y="86" width="47" height="30"/>
+                                <animations/>
+                                <state key="normal" title="zurück"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="0gr-b5-H3A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLk-4i-oeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="312"/>
         </scene>
     </scenes>
     <resources>
