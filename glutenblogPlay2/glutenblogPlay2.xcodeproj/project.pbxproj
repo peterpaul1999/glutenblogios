@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6381BCAC4A9008D2459 /* BlurView.swift */; settings = {ASSET_TAGS = (); }; };
+		BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6391BCAC4A9008D2459 /* Data.swift */; settings = {ASSET_TAGS = (); }; };
+		BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */; settings = {ASSET_TAGS = (); }; };
+		BA7BC6401BCAC4A9008D2459 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63B1BCAC4A9008D2459 /* Misc.swift */; settings = {ASSET_TAGS = (); }; };
+		BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */; settings = {ASSET_TAGS = (); }; };
 		BAB3982F1BC974DC00D9FFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3982E1BC974DC00D9FFAE /* AppDelegate.swift */; };
 		BAB398311BC974DC00D9FFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398301BC974DC00D9FFAE /* ViewController.swift */; };
 		BAB398341BC974DC00D9FFAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB398321BC974DC00D9FFAE /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA7BC6381BCAC4A9008D2459 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		BA7BC6391BCAC4A9008D2459 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		BA7BC63B1BCAC4A9008D2459 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		BAB3982B1BC974DC00D9FFAE /* glutenblogPlay2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glutenblogPlay2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB3982E1BC974DC00D9FFAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB398301BC974DC00D9FFAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA7BC6371BCAC4A9008D2459 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				BA7BC6381BCAC4A9008D2459 /* BlurView.swift */,
+				BA7BC6391BCAC4A9008D2459 /* Data.swift */,
+				BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */,
+				BA7BC63B1BCAC4A9008D2459 /* Misc.swift */,
+				BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */,
+			);
+			path = Spring;
+			sourceTree = "<group>";
+		};
 		BAB398221BC974DC00D9FFAE = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +78,7 @@
 		BAB3982D1BC974DC00D9FFAE /* glutenblogPlay2 */ = {
 			isa = PBXGroup;
 			children = (
+				BA7BC6371BCAC4A9008D2459 /* Spring */,
 				BAB3982E1BC974DC00D9FFAE /* AppDelegate.swift */,
 				BAB398301BC974DC00D9FFAE /* ViewController.swift */,
 				BAB398321BC974DC00D9FFAE /* Main.storyboard */,
@@ -139,6 +162,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB398311BC974DC00D9FFAE /* ViewController.swift in Sources */,
+				BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */,
+				BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */,
+				BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */,
+				BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */,
+				BA7BC6401BCAC4A9008D2459 /* Misc.swift in Sources */,
 				BAB3982F1BC974DC00D9FFAE /* AppDelegate.swift in Sources */,
 				BAB398371BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld in Sources */,
 			);
@@ -288,6 +316,7 @@
 				BAB398421BC974DD00D9FFAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

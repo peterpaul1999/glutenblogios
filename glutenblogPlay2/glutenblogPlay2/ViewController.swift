@@ -10,7 +10,42 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var popOverButton: UIButton!
+    @IBOutlet weak var maskButton: UIButton!
+    @IBOutlet weak var popOverView: UIView!
     
+    @IBAction func popOverButtonDidPress(sender: AnyObject) {
+        
+        popOverView.hidden = false
+        let scale = CGAffineTransformMakeScale(0.3, 0.3)
+        let translate = CGAffineTransformMakeTranslation(-50, -50 )
+        popOverView.transform = CGAffineTransformConcat(scale, translate)
+        popOverView.alpha = 0
+        
+        maskButton.hidden = false
+        maskButton.alpha = 0
+        spring(0.5) {
+            self.maskButton.alpha = 1
+        }
+        
+        spring(0.5) {
+            let scale = CGAffineTransformMakeScale(1, 1)
+            let translate = CGAffineTransformMakeTranslation(0, 0)
+            self.popOverView.transform = CGAffineTransformConcat(scale, translate)
+            self.popOverView.alpha = 1
+        }
+    }
+    
+    @IBAction func maskButtonDidPress(sender: AnyObject) {
+        spring(0.5) {
+            self.maskButton.alpha = 0
+            //self.maskButton.hidden = true
+        }
+        
+        spring(0.5) {
+            self.popOverView.hidden = true
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
