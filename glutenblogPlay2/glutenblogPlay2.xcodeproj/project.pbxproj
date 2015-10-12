@@ -12,6 +12,9 @@
 		BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC6401BCAC4A9008D2459 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63B1BCAC4A9008D2459 /* Misc.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		BA93BC251BCC2C4E00A5BBB8 /* CustomForwardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93BC241BCC2C4E00A5BBB8 /* CustomForwardSegue.swift */; settings = {ASSET_TAGS = (); }; };
+		BA93BC271BCC2C7800A5BBB8 /* CustomBackwardSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93BC261BCC2C7800A5BBB8 /* CustomBackwardSeque.swift */; settings = {ASSET_TAGS = (); }; };
+		BA93BC2B1BCC40F200A5BBB8 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA93BC2A1BCC40F200A5BBB8 /* CustomSearchBar.swift */; settings = {ASSET_TAGS = (); }; };
 		BAB3982F1BC974DC00D9FFAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3982E1BC974DC00D9FFAE /* AppDelegate.swift */; };
 		BAB398311BC974DC00D9FFAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398301BC974DC00D9FFAE /* ViewController.swift */; };
 		BAB398341BC974DC00D9FFAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB398321BC974DC00D9FFAE /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 		BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		BA7BC63B1BCAC4A9008D2459 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		BA93BC241BCC2C4E00A5BBB8 /* CustomForwardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomForwardSegue.swift; sourceTree = "<group>"; };
+		BA93BC261BCC2C7800A5BBB8 /* CustomBackwardSeque.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBackwardSeque.swift; sourceTree = "<group>"; };
+		BA93BC2A1BCC40F200A5BBB8 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSearchBar.swift; path = Spring/CustomSearchBar.swift; sourceTree = "<group>"; };
 		BAB3982B1BC974DC00D9FFAE /* glutenblogPlay2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glutenblogPlay2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB3982E1BC974DC00D9FFAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB398301BC974DC00D9FFAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,12 +86,15 @@
 			children = (
 				BA7BC6371BCAC4A9008D2459 /* Spring */,
 				BAB3982E1BC974DC00D9FFAE /* AppDelegate.swift */,
+				BA93BC2A1BCC40F200A5BBB8 /* CustomSearchBar.swift */,
 				BAB398301BC974DC00D9FFAE /* ViewController.swift */,
 				BAB398321BC974DC00D9FFAE /* Main.storyboard */,
 				BAB398381BC974DD00D9FFAE /* Assets.xcassets */,
 				BAB3983A1BC974DD00D9FFAE /* LaunchScreen.storyboard */,
 				BAB3983D1BC974DD00D9FFAE /* Info.plist */,
 				BAB398351BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld */,
+				BA93BC241BCC2C4E00A5BBB8 /* CustomForwardSegue.swift */,
+				BA93BC261BCC2C7800A5BBB8 /* CustomBackwardSeque.swift */,
 			);
 			path = glutenblogPlay2;
 			sourceTree = "<group>";
@@ -163,11 +172,14 @@
 			files = (
 				BAB398311BC974DC00D9FFAE /* ViewController.swift in Sources */,
 				BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */,
+				BA93BC251BCC2C4E00A5BBB8 /* CustomForwardSegue.swift in Sources */,
 				BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */,
 				BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */,
 				BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */,
 				BA7BC6401BCAC4A9008D2459 /* Misc.swift in Sources */,
+				BA93BC271BCC2C7800A5BBB8 /* CustomBackwardSeque.swift in Sources */,
 				BAB3982F1BC974DC00D9FFAE /* AppDelegate.swift in Sources */,
+				BA93BC2B1BCC40F200A5BBB8 /* CustomSearchBar.swift in Sources */,
 				BAB398371BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

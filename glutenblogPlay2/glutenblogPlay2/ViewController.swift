@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var popOverButton: UIButton!
     @IBOutlet weak var maskButton: UIButton!
     @IBOutlet weak var popOverView: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBAction func popOverButtonDidPress(sender: AnyObject) {
         
@@ -51,6 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         tableView.rowHeight = 101
         tableView.separatorColor = UIColor(red: 62/255, green: 78/255, blue: 98/255, alpha: 1)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +61,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -74,6 +76,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegueWithIdentifier("detailSegue", sender: self)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     
