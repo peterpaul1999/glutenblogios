@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA6FBF511BCD811C00ACC506 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6381BCAC4A9008D2459 /* BlurView.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6391BCAC4A9008D2459 /* Data.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BA7BC6381BCAC4A9008D2459 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		BA7BC6391BCAC4A9008D2459 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				BAB398351BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld */,
 				BA93BC241BCC2C4E00A5BBB8 /* CustomForwardSegue.swift */,
 				BA93BC261BCC2C7800A5BBB8 /* CustomBackwardSeque.swift */,
+				BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */,
 			);
 			path = glutenblogPlay2;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				BAB398311BC974DC00D9FFAE /* ViewController.swift in Sources */,
 				BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */,
 				BA93BC251BCC2C4E00A5BBB8 /* CustomForwardSegue.swift in Sources */,
+				BA6FBF511BCD811C00ACC506 /* DetailViewController.swift in Sources */,
 				BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */,
 				BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */,
 				BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */,
