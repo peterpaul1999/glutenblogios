@@ -30,6 +30,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var preperationTextView: UITextView!
     
     @IBOutlet weak var ingredientsTextView: UITextView!
+    @IBOutlet weak var imagePopOverView: UIView!
+    @IBOutlet weak var maskButton: UIButton!
     
     
     
@@ -67,8 +69,38 @@ class DetailViewController: UIViewController {
         ingredientsTextView.hidden = false
     }
     @IBAction func imagesButtonDidPress(sender: AnyObject) {
+        imagePopOverView.hidden = false
+        
+        let scale = CGAffineTransformMakeScale(0.3, 0.3)
+        let translate = CGAffineTransformMakeTranslation(50, -50 )
+        imagePopOverView.transform = CGAffineTransformConcat(scale, translate)
+        imagePopOverView.alpha = 0
+        
+        maskButton.hidden = false
+        maskButton.alpha = 0
+        spring(0.5) {
+            self.maskButton.alpha = 1
+        }
+        
+        spring(0.5) {
+            let scale = CGAffineTransformMakeScale(1, 1)
+            let translate = CGAffineTransformMakeTranslation(0, 0)
+            self.imagePopOverView.transform = CGAffineTransformConcat(scale, translate)
+            self.imagePopOverView.alpha = 1
+        }
     }
     
+    @IBAction func closePopButtonDidPress(sender: AnyObject) {
+        
+        spring(0.5) {
+            self.maskButton.alpha = 0
+            //self.maskButton.hidden = true
+        }
+        
+        spring(0.5) {
+            self.imagePopOverView.hidden = true
+        }
+    }
     
     
     override func viewDidLoad() {
