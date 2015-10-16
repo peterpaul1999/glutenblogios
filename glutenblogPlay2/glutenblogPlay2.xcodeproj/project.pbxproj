@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA6B4E411BD1605900A04D0F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6B4E401BD1605900A04D0F /* Data.swift */; settings = {ASSET_TAGS = (); }; };
 		BA6FBF511BCD811C00ACC506 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6381BCAC4A9008D2459 /* BlurView.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6391BCAC4A9008D2459 /* Data.swift */; settings = {ASSET_TAGS = (); }; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA6B4E401BD1605900A04D0F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BA7BC6381BCAC4A9008D2459 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		BA7BC6391BCAC4A9008D2459 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				BA93BC241BCC2C4E00A5BBB8 /* CustomForwardSegue.swift */,
 				BA93BC261BCC2C7800A5BBB8 /* CustomBackwardSeque.swift */,
 				BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */,
+				BA6B4E401BD1605900A04D0F /* Data.swift */,
 			);
 			path = glutenblogPlay2;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */,
 				BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */,
 				BA7BC6401BCAC4A9008D2459 /* Misc.swift in Sources */,
+				BA6B4E411BD1605900A04D0F /* Data.swift in Sources */,
 				BA93BC271BCC2C7800A5BBB8 /* CustomBackwardSeque.swift in Sources */,
 				BAB3982F1BC974DC00D9FFAE /* AppDelegate.swift in Sources */,
 				BA93BC2B1BCC40F200A5BBB8 /* CustomSearchBar.swift in Sources */,

@@ -14,6 +14,9 @@ class DetailViewController: UIViewController {
     var lightBlue = UIColor(red: 145/255, green: 184/255, blue: 231/255, alpha: 1)
     var middleBlue = UIColor(red: 74/255, green: 143/255, blue: 226/255, alpha: 1)
     
+    var data = getData()
+    var number = 0
+    
 
     @IBOutlet weak var recipeButton: UIButton!
     @IBOutlet weak var recipeView: UIView!
