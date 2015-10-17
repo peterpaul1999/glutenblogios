@@ -10,7 +10,6 @@
 		BA6B4E411BD1605900A04D0F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6B4E401BD1605900A04D0F /* Data.swift */; settings = {ASSET_TAGS = (); }; };
 		BA6FBF511BCD811C00ACC506 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6381BCAC4A9008D2459 /* BlurView.swift */; settings = {ASSET_TAGS = (); }; };
-		BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC6391BCAC4A9008D2459 /* Data.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC6401BCAC4A9008D2459 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63B1BCAC4A9008D2459 /* Misc.swift */; settings = {ASSET_TAGS = (); }; };
 		BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */; settings = {ASSET_TAGS = (); }; };
@@ -29,7 +28,6 @@
 		BA6B4E401BD1605900A04D0F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BA7BC6381BCAC4A9008D2459 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		BA7BC6391BCAC4A9008D2459 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		BA7BC63B1BCAC4A9008D2459 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				BA7BC6381BCAC4A9008D2459 /* BlurView.swift */,
-				BA7BC6391BCAC4A9008D2459 /* Data.swift */,
 				BA7BC63A1BCAC4A9008D2459 /* DesignableView.swift */,
 				BA7BC63B1BCAC4A9008D2459 /* Misc.swift */,
 				BA7BC63C1BCAC4A9008D2459 /* SpringAnimation.swift */,
@@ -177,7 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB398311BC974DC00D9FFAE /* ViewController.swift in Sources */,
-				BA7BC63E1BCAC4A9008D2459 /* Data.swift in Sources */,
 				BA93BC251BCC2C4E00A5BBB8 /* CustomForwardSegue.swift in Sources */,
 				BA6FBF511BCD811C00ACC506 /* DetailViewController.swift in Sources */,
 				BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */,

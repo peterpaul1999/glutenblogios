@@ -636,9 +636,6 @@ Testkategorie</string>
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="8Fk-6O-zjm" appends="YES" id="hWR-uq-O80"/>
-                                </connections>
                             </view>
                         </subviews>
                         <animations/>
@@ -660,7 +657,6 @@ Testkategorie</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLk-4i-oeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="8Fk-6O-zjm"/>
             </objects>
             <point key="canvasLocation" x="740" y="312"/>
         </scene>
