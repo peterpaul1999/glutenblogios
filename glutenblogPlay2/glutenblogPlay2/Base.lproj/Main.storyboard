@@ -636,6 +636,9 @@ Testkategorie</string>
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FBP-yr-rbR" appends="YES" id="QkF-H1-vCm"/>
+                                </connections>
                             </view>
                         </subviews>
                         <animations/>
@@ -649,6 +652,8 @@ Testkategorie</string>
                         <outlet property="ingredientsTextView" destination="e3R-4c-35k" id="wtC-ko-guU"/>
                         <outlet property="ingredientsView" destination="ifv-vk-Cqw" id="Fik-C4-OCt"/>
                         <outlet property="maskButton" destination="KuT-SY-PQJ" id="yc1-A0-WlJ"/>
+                        <outlet property="panRecognizer" destination="FBP-yr-rbR" id="f00-M5-wf6"/>
+                        <outlet property="popUpImage" destination="vSi-Yp-k4h" id="r43-hC-QyP"/>
                         <outlet property="preperationButton" destination="hWA-lR-yzV" id="3S4-z4-OCZ"/>
                         <outlet property="preperationTextView" destination="y7b-1t-cId" id="vp8-Wq-VAy"/>
                         <outlet property="preperationView" destination="555-py-uo4" id="mty-eC-8HN"/>
@@ -657,6 +662,11 @@ Testkategorie</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLk-4i-oeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="FBP-yr-rbR">
+                    <connections>
+                        <action selector="handleGesture:" destination="Zwu-87-lWY" id="TsQ-5X-z52"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="740" y="312"/>
         </scene>

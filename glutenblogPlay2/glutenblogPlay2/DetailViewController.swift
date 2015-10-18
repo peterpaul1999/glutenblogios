@@ -35,7 +35,56 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ingredientsTextView: UITextView!
     @IBOutlet weak var imagePopOverView: UIView!
     @IBOutlet weak var maskButton: UIButton!
+    @IBOutlet weak var popUpImage: UIImageView!
     
+    
+    @IBOutlet var panRecognizer: UIPanGestureRecognizer!
+    
+    var animator : UIDynamicAnimator!
+    var attachmentBehavior : UIAttachmentBehavior!
+    var gravityBehaviour : UIGravityBehavior!
+    var snapBehavior : UISnapBehavior!
+    
+    @IBAction func handleGesture(sender: AnyObject) {
+        let myView = imagePopOverView
+        let location = sender.locationInView(view)
+        let boxLocation = sender.locationInView(imagePopOverView)
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            if snapBehavior != nil {
+                animator.removeBehavior(snapBehavior)
+            }
+            
+            let centerOffset = UIOffsetMake(boxLocation.x - CGRectGetMidX(myView.bounds), boxLocation.y - CGRectGetMidY(myView.bounds));
+            attachmentBehavior = UIAttachmentBehavior(item: myView, offsetFromCenter: centerOffset, attachedToAnchor: location)
+            attachmentBehavior.frequency = 0
+            
+            animator.addBehavior(attachmentBehavior)
+        }
+        else if sender.state == UIGestureRecognizerState.Changed {
+            attachmentBehavior.anchorPoint = location
+        }
+        else if sender.state == UIGestureRecognizerState.Ended {
+            animator.removeBehavior(attachmentBehavior)
+            
+            snapBehavior = UISnapBehavior(item: myView, snapToPoint: view.center)
+            animator.addBehavior(snapBehavior)
+            
+            let translation = sender.translationInView(view)
+            if translation.y > 100 {
+                popUpImage.image = UIImage(named: "macarons_big2")
+                //animator.removeAllBehaviors()
+                
+                //let gravity = UIGravityBehavior(items: [imagePopOverView])
+                //gravity.gravityDirection = CGVectorMake(0, 10)
+                //animator.addBehavior(gravity)
+                
+                
+                
+            }
+        }
+
+    }
     
     
     @IBAction func recipeButtonDidPress(sender: AnyObject) {
@@ -72,6 +121,7 @@ class DetailViewController: UIViewController {
         ingredientsTextView.hidden = false
     }
     @IBAction func imagesButtonDidPress(sender: AnyObject) {
+        popUpImage.image = UIImage(named: "macarons_big1")
         imagePopOverView.hidden = false
         
         let scale = CGAffineTransformMakeScale(0.3, 0.3)
@@ -110,6 +160,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        animator = UIDynamicAnimator(referenceView: view)
     }
 
     override func didReceiveMemoryWarning() {
