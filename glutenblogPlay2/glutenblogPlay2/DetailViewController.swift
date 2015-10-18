@@ -36,6 +36,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imagePopOverView: UIView!
     @IBOutlet weak var maskButton: UIButton!
     @IBOutlet weak var popUpImage: UIImageView!
+    @IBOutlet weak var imageLabel: UILabel!
     
     
     @IBOutlet var panRecognizer: UIPanGestureRecognizer!
@@ -71,19 +72,57 @@ class DetailViewController: UIViewController {
             animator.addBehavior(snapBehavior)
             
             let translation = sender.translationInView(view)
-            if translation.y > 100 {
-                popUpImage.image = UIImage(named: "macarons_big2")
-                //animator.removeAllBehaviors()
+            if (translation.y > 100 || translation.y < -100) {
+                animator.removeAllBehaviors()
                 
-                //let gravity = UIGravityBehavior(items: [imagePopOverView])
-                //gravity.gravityDirection = CGVectorMake(0, 10)
-                //animator.addBehavior(gravity)
+                let gravity = UIGravityBehavior(items: [imagePopOverView])
+                gravity.gravityDirection = CGVectorMake(0, 10)
+                animator.addBehavior(gravity)
                 
+                if translation.y > 100 { number++ } else {number--}
                 
-                
+                self.refreshView()
             }
         }
+    }
+    
+    func refreshView() {
+        if number > data.count-1 {
+            number = 0
+        }
+        
+        if number < 0 {
+            number = data.count-1
+        }
+        
+        animator.removeAllBehaviors()
+        
+        snapBehavior = UISnapBehavior(item: imagePopOverView, snapToPoint: view.center)
+        attachmentBehavior.anchorPoint = view.center
+        
+        imagePopOverView.center = view.center
+        
+        
+        
+        viewDidAppear(true)
+    }
 
+    override func viewDidAppear(animated: Bool) {
+            super.viewDidAppear(Bool())
+
+            let scale = CGAffineTransformMakeScale(0.5, 0.5)
+            let translate = CGAffineTransformMakeTranslation(0, -200)
+            imagePopOverView.transform = CGAffineTransformConcat(scale, translate)
+            
+            spring(0.5) {
+                let scale = CGAffineTransformMakeScale(1, 1)
+                let translate = CGAffineTransformMakeTranslation(0, 0)
+                self.imagePopOverView.transform = CGAffineTransformConcat(scale, translate)
+            }
+        
+            popUpImage.image = UIImage(named: data[number]["image"]!)
+            imageLabel.text = "Bild \(number+1) von \(data.count)"
+            imagePopOverView.alpha = 1
     }
     
     
@@ -121,9 +160,9 @@ class DetailViewController: UIViewController {
         ingredientsTextView.hidden = false
     }
     @IBAction func imagesButtonDidPress(sender: AnyObject) {
-        popUpImage.image = UIImage(named: "macarons_big1")
+        number = 0
         imagePopOverView.hidden = false
-        
+
         let scale = CGAffineTransformMakeScale(0.3, 0.3)
         let translate = CGAffineTransformMakeTranslation(50, -50 )
         imagePopOverView.transform = CGAffineTransformConcat(scale, translate)
@@ -141,6 +180,8 @@ class DetailViewController: UIViewController {
             self.imagePopOverView.transform = CGAffineTransformConcat(scale, translate)
             self.imagePopOverView.alpha = 1
         }
+        
+        
     }
     
     @IBAction func closePopButtonDidPress(sender: AnyObject) {
@@ -160,7 +201,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         animator = UIDynamicAnimator(referenceView: view)
     }
 
