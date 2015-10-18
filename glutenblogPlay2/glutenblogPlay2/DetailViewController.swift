@@ -35,7 +35,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ingredientsTextView: UITextView!
     @IBOutlet weak var imagePopOverView: UIView!
     @IBOutlet weak var maskButton: UIButton!
-    @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var popUpImage: UIImageView!
     @IBOutlet weak var popImageBlurView: UIView!
     @IBOutlet weak var imageLabel: UILabel!
@@ -110,7 +109,7 @@ class DetailViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-            super.viewDidAppear(Bool())
+        super.viewDidAppear(Bool())
 
             let scale = CGAffineTransformMakeScale(0.5, 0.5)
             let translate = CGAffineTransformMakeTranslation(0, -200)
@@ -178,12 +177,6 @@ class DetailViewController: UIViewController {
             self.maskButton.alpha = 1
         }
         
-        blurView.hidden = false
-        blurView.alpha = 0
-        spring(0.5) {
-            self.blurView.alpha = 1
-        }
-        
         spring(0.5) {
             let scale = CGAffineTransformMakeScale(1, 1)
             let translate = CGAffineTransformMakeTranslation(0, 0)
@@ -198,7 +191,6 @@ class DetailViewController: UIViewController {
         
         spring(0.5) {
             self.maskButton.alpha = 0
-            self.blurView.alpha = 0
             //self.maskView.hidden = true
         }
         
@@ -212,7 +204,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        insertBlurView(blurView, style: UIBlurEffectStyle.Light)
         insertBlurView(popImageBlurView, style: UIBlurEffectStyle.Light)
         animator = UIDynamicAnimator(referenceView: view)
     }
