@@ -13,9 +13,6 @@ func insertBlurView (view: UIView, style: UIBlurEffectStyle) {
     
     let blurEffect = UIBlurEffect(style: style)
     let blurEffectView = UIVisualEffectView(effect: blurEffect)
-    print(view.bounds.height)
-    print(view.bounds.width)
-    print(view.tag)
     blurEffectView.frame = view.bounds
     view.insertSubview(blurEffectView, atIndex: 0)
 }
