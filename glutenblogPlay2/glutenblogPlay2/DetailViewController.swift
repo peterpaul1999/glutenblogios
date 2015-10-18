@@ -35,7 +35,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ingredientsTextView: UITextView!
     @IBOutlet weak var imagePopOverView: UIView!
     @IBOutlet weak var maskButton: UIButton!
+    @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var popUpImage: UIImageView!
+    @IBOutlet weak var popImageBlurView: UIView!
     @IBOutlet weak var imageLabel: UILabel!
     
     
@@ -161,6 +163,8 @@ class DetailViewController: UIViewController {
     }
     @IBAction func imagesButtonDidPress(sender: AnyObject) {
         number = 0
+        popUpImage.image = UIImage(named: data[number]["image"]!)
+        imageLabel.text = "Bild \(number+1) von \(data.count)"
         imagePopOverView.hidden = false
 
         let scale = CGAffineTransformMakeScale(0.3, 0.3)
@@ -172,6 +176,12 @@ class DetailViewController: UIViewController {
         maskButton.alpha = 0
         spring(0.5) {
             self.maskButton.alpha = 1
+        }
+        
+        blurView.hidden = false
+        blurView.alpha = 0
+        spring(0.5) {
+            self.blurView.alpha = 1
         }
         
         spring(0.5) {
@@ -188,7 +198,8 @@ class DetailViewController: UIViewController {
         
         spring(0.5) {
             self.maskButton.alpha = 0
-            //self.maskButton.hidden = true
+            self.blurView.alpha = 0
+            //self.maskView.hidden = true
         }
         
         spring(0.5) {
@@ -201,6 +212,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        insertBlurView(blurView, style: UIBlurEffectStyle.Light)
+        insertBlurView(popImageBlurView, style: UIBlurEffectStyle.Light)
         animator = UIDynamicAnimator(referenceView: view)
     }
 
