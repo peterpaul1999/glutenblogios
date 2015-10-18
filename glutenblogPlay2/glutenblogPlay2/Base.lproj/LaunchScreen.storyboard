@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +14,33 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="startup-logo" translatesAutoresizingMaskIntoConstraints="NO" id="6gi-TZ-EF0">
+                                <rect key="frame" x="20" y="163" width="280" height="241"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6gi-TZ-EF0" secondAttribute="height" multiplier="280:241" id="THx-rS-OT9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2901960784" green="0.56078431370000004" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6gi-TZ-EF0" secondAttribute="trailing" constant="20" id="A7H-JC-OHS"/>
+                            <constraint firstItem="6gi-TZ-EF0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="MOG-66-1cJ"/>
+                            <constraint firstItem="6gi-TZ-EF0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Yjc-oC-M9N"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="45" y="303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="startup-logo" width="433" height="371"/>
+    </resources>
 </document>

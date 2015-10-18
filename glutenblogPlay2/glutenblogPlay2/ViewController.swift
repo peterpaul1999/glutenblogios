@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var popOverView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
     @IBAction func popOverButtonDidPress(sender: AnyObject) {
         
         popOverView.hidden = false
