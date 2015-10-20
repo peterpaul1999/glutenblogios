@@ -22,6 +22,7 @@
 		BAB398371BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB398351BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld */; };
 		BAB398391BC974DD00D9FFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB398381BC974DD00D9FFAE /* Assets.xcassets */; };
 		BAB3983C1BC974DD00D9FFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB3983A1BC974DD00D9FFAE /* LaunchScreen.storyboard */; };
+		BAC17DEF1BD6C73800A19332 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC17DEE1BD6C73800A19332 /* RecipeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BAB398381BC974DD00D9FFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB3983B1BC974DD00D9FFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB3983D1BC974DD00D9FFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAC17DEE1BD6C73800A19332 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				BA93BC261BCC2C7800A5BBB8 /* CustomBackwardSeque.swift */,
 				BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */,
 				BA6B4E401BD1605900A04D0F /* Data.swift */,
+				BAC17DEE1BD6C73800A19332 /* RecipeTableViewCell.swift */,
 			);
 			path = glutenblogPlay2;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				BAB398311BC974DC00D9FFAE /* ViewController.swift in Sources */,
 				BA93BC251BCC2C4E00A5BBB8 /* CustomForwardSegue.swift in Sources */,
 				BA6FBF511BCD811C00ACC506 /* DetailViewController.swift in Sources */,
+				BAC17DEF1BD6C73800A19332 /* RecipeTableViewCell.swift in Sources */,
 				BA7BC63F1BCAC4A9008D2459 /* DesignableView.swift in Sources */,
 				BA7BC6411BCAC4A9008D2459 /* SpringAnimation.swift in Sources */,
 				BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */,

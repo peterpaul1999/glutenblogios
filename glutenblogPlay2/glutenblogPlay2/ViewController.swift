@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -51,9 +53,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         tableView.rowHeight = 101
         tableView.separatorColor = UIColor(red: 62/255, green: 78/255, blue: 98/255, alpha: 1)
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,13 +65,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell") as UITableViewCell!
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell") as! RecipeTableViewCell
+        cell.recipeName.text = "Hallo"
         return cell
     }
     
@@ -83,7 +86,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return .LightContent
     }
     
-    
-
 }
 
