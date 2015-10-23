@@ -108,7 +108,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.recipeName.text = data["name"].string
         let imgString = data["imgBig"].string!
         print("Image: \(imgString)")
-        let urlString = "http:localhost:9000/images/\(imgString)"
+        let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
         print("URL: \(urlString)")
         let url = NSURL(string: urlString)
         cell.recipeImage.hnk_setImageFromURL(url!)
@@ -116,6 +116,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let persons = "\(personsInt) Pers."
         print("Personen: \(persons)")
         cell.recipeNumber.text = persons
+        
+        let categories = data["categories"]
+        
+        var categoriesText = ""
+        
+        for i in 0...categories.count-1 {
+            print("TEST: " + categories[i]["name"].string!)
+            if i>0 {
+                categoriesText = categoriesText + ", " + categories[i]["name"].string!
+            } else {
+                categoriesText = categories[i]["name"].string!
+            }
+        }
+        
+        cell.recipeCategories.text = categoriesText
         
         return cell
     }
