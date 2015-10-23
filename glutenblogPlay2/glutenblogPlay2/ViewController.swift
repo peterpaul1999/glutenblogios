@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 import Haneke
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var popOverButton: UIButton!
@@ -20,7 +20,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var searchBar: UISearchBar!
     
     var datas: [JSON] = []
+    var filteredDatas:[JSON] = []
     var test = 0
+    
+    var searchActive : Bool = false
     
     @IBAction func popOverButtonDidPress(sender: AnyObject) {
         
@@ -94,8 +97,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let test2 = datas.count
-        print("Zeilen2: \(test2)")
+        if(searchActive) {
+            return filteredDatas.count
+        }
         return datas.count
     }
     
@@ -104,7 +108,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell") as! RecipeTableViewCell
         
         //comment out if no server is running
-        let data = datas[indexPath.row]
+        var data = datas[indexPath.row]
+        if(searchActive){
+            data = filteredDatas[indexPath.row]
+        }
+        
         cell.recipeName.text = data["name"].string
         let imgString = data["imgBig"].string!
         print("Image: \(imgString)")
@@ -144,6 +152,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text!.isEmpty{
+            searchActive = false
+            tableView.reloadData()
+        } else {
+            print(" search text \(searchBar.text)")
+            searchActive = true
+            filteredDatas.removeAll()
+            for var index = 0; index < datas.count; index++
+            {
+                let data = datas[index]
+                
+                let currentString = data["name"].string
+                if currentString!.lowercaseString.rangeOfString(searchText.lowercaseString)  != nil {
+                    filteredDatas.append(data)                    
+                }
+            }
+            tableView.reloadData()
+        }
     }
     
 }
