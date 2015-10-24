@@ -192,5 +192,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailSegue" {
+            let toView = segue.destinationViewController as! DetailViewController
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            toView.recipe = datas[indexPath.row]
+        }
+    }
+    
 }
 

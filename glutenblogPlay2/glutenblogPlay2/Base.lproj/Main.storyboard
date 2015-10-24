@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -492,7 +493,7 @@ Testkategorie</string>
                                     <constraint firstAttribute="bottom" secondItem="3C6-c3-YSP" secondAttribute="bottom" id="qoi-za-qHK"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="156-O7-67b">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="156-O7-67b">
                                 <rect key="frame" x="10" y="308" width="300" height="250"/>
                                 <animations/>
                                 <string key="text">Wer schonmal einen Bagel gegessen hat, kann sich bestimmt vorstellen wie sehr ich mich gerade freue diesen Post zu schreiben. Ich habe tatsächlich ein geniales Rezept für glutenfreie Bagels auf die Beine gestellt. Das Rezept ist zwar etwas zeitintensiv, aber jede Minute lohnt sich.</string>
@@ -500,7 +501,7 @@ Testkategorie</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7b-1t-cId">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7b-1t-cId">
                                 <rect key="frame" x="10" y="308" width="300" height="250"/>
                                 <animations/>
                                 <string key="text">Die Hälfte der Hefe mit der Hälfte vom Mehl und dem lauwarmen Wasser verrühren. Dabei sollte ein klebriger, weicher Vorteig entstehen. Dieser wird mit Klarsichtfolie abgedeckt und ruht für mind. 2 Stunden bis er deutlich aufgegangen ist. Jetzt gibt man die restlichen Zutaten (außer Natron) zum Teig und knetet 5-8 Minuten bis eine homogene Masse entsteht. Den Teig auf einer bemehlten Fläche nochmal 2-3 Minuten mit den Händen durchkneten, anschließend Kugeln formen und diese auf einem Backblech mit Backpapier ausgelegt verteilen. Hier empfehle ich jedes Teigstück (hier waren es jeweils 100g) abzuwiegen, damit alle Bagels gleich groß und gleich durch sind. \nJetzt müssen die Teiglinge eine gute Stunde ruhen. Dazu empfiehlt sich eine Plastiktüte oder bei einem größeren Backblech 2 Tüten übereinander zu stülpen. Dadurch geht die Wärme nicht verloren und die Bagels gehen schneller auf. Wenn die Bagels etwas aufgegangen sind, können mit einem Apfelschneider oder Spritztüllen kleine Löcher in der Mitte ausgestochen werden. Die Teiglinge nochmal 30 Minuten in einer Plastiktüte gehen lassen. \nJetzt kann es endlich losgehen. Reichlich Wasser in einem größeren Topf zum Kochen bringen, Natron dazugeben und die Hitze um 1/3 runterdrehen. Die Bagels von jeder Seite 1 Minute im Wasser baden und auf einem Rost abtrocknen lassen. Wie man auf den Bildern (siehe unten) erkennen kann, habe ich auch Bagels auf jeder Seite 3 Minuten und einen gar nicht im Wasser schwimmen lassen. Sinn der Sache war es, die perfekte Badezeit herauszufinden! Fazit: von jeder Seite eine Minute ist perfekt.\nJe nach Belieben können die Bagels jetzt mit Mohn, Sesam oder anderen Körnern belegt werden und auf 190°C für 25-30 Minuten in den Backofen bis sie etwas bräuner sind. Abkühlen lassen und sofort mit bswp. Frischkäse genießen. Haltbar sind die Bagels max. 1-2 Tage, da sie schnell austrocknen. Am besten nach dem Auskühlen einfrieren!</string>
@@ -508,7 +509,7 @@ Testkategorie</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-4c-35k">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-4c-35k">
                                 <rect key="frame" x="10" y="308" width="300" height="250"/>
                                 <animations/>
                                 <string key="text">0.5 Päckchen Trockenhefe
@@ -628,6 +629,10 @@ Testkategorie</string>
                         <outlet property="preperationTextView" destination="y7b-1t-cId" id="vp8-Wq-VAy"/>
                         <outlet property="preperationView" destination="555-py-uo4" id="mty-eC-8HN"/>
                         <outlet property="recipeButton" destination="oi6-fr-tWt" id="H9Y-iZ-gwc"/>
+                        <outlet property="recipeImage" destination="c4S-kc-b7S" id="7UH-He-Xsu"/>
+                        <outlet property="recipeName" destination="s0i-Vg-reE" id="ZXk-4K-ykU"/>
+                        <outlet property="recipeNumber" destination="Mmk-Ye-2Ct" id="Uku-ND-9Qt"/>
+                        <outlet property="recipeTime" destination="gbR-dY-1ar" id="5Ty-iQ-TRE"/>
                         <outlet property="recipeView" destination="ood-hq-rRu" id="eaB-sK-dbD"/>
                     </connections>
                 </viewController>

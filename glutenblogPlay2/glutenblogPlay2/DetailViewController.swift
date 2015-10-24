@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     var data = getData()
     var number = 0
     
+    var recipe: JSON!
+    
 
     @IBOutlet weak var recipeButton: UIButton!
     @IBOutlet weak var recipeView: UIView!
@@ -38,6 +40,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var popUpImage: UIImageView!
     @IBOutlet weak var popImageBlurView: UIView!
     @IBOutlet weak var imageLabel: UILabel!
+    @IBOutlet weak var recipeName: UILabel!
+    @IBOutlet weak var recipeTime: UILabel!
+    @IBOutlet weak var recipeNumber: UILabel!
+    @IBOutlet weak var recipeImage: UIImageView!
     
     
     @IBOutlet var panRecognizer: UIPanGestureRecognizer!
@@ -206,6 +212,24 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         insertBlurView(popImageBlurView, style: UIBlurEffectStyle.Light)
         animator = UIDynamicAnimator(referenceView: view)
+        
+        recipeName.text = recipe["name"].string
+        
+        let personsInt = recipe["numberOfServings"].int!
+        let persons = "\(personsInt) Pers."
+        print("Personen: \(persons)")
+        recipeNumber.text = persons
+        
+        descriptionView.text = recipe["description"].string
+        preperationTextView.text = recipe["preperation"].string
+        
+        let imgString = recipe["imgBig"].string!
+        let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
+        print("URL: \(urlString)")
+        let url = NSURL(string: urlString)
+        recipeImage.hnk_setImageFromURL(url!)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
