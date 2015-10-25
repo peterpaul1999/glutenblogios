@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     var middleBlue = UIColor(red: 74/255, green: 143/255, blue: 226/255, alpha: 1)
     
     var data = getData()
-    var number = 0
+    var number = 1
     
     var recipe: JSON!
     
@@ -44,6 +44,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var recipeTime: UILabel!
     @IBOutlet weak var recipeNumber: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var ingredientsSubView: UIView!
     
     
     @IBOutlet var panRecognizer: UIPanGestureRecognizer!
@@ -94,12 +95,12 @@ class DetailViewController: UIViewController {
     }
     
     func refreshView() {
-        if number > data.count-1 {
-            number = 0
+        if number > 5 {
+            number = 1
         }
         
-        if number < 0 {
-            number = data.count-1
+        if number < 1 {
+            number = 5
         }
         
         animator.removeAllBehaviors()
@@ -127,8 +128,14 @@ class DetailViewController: UIViewController {
                 self.imagePopOverView.transform = CGAffineTransformConcat(scale, translate)
             }
         
-            popUpImage.image = UIImage(named: data[number]["image"]!)
-            imageLabel.text = "Bild \(number+1) von \(data.count)"
+            //popUpImage.image = UIImage(named: data[number]["image"]!)
+            let restString = "imgBig\(number)"
+            let imgString = recipe[restString].string!
+            let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
+            print("URL: \(urlString)")
+            let url = NSURL(string: urlString)
+            popUpImage.hnk_setImageFromURL(url!)
+            imageLabel.text = "Bild \(number) von 5"
             imagePopOverView.alpha = 1
     }
     
@@ -167,9 +174,17 @@ class DetailViewController: UIViewController {
         ingredientsTextView.hidden = false
     }
     @IBAction func imagesButtonDidPress(sender: AnyObject) {
-        number = 0
-        popUpImage.image = UIImage(named: data[number]["image"]!)
-        imageLabel.text = "Bild \(number+1) von \(data.count)"
+        number = 1
+        //popUpImage.image = UIImage(named: data[number]["image"]!)
+        let restString = "imgBig\(number)"
+        let imgString = recipe[restString].string!
+        let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
+        print("URL: \(urlString)")
+        let url = NSURL(string: urlString)
+        popUpImage.hnk_setImageFromURL(url!)
+        
+        
+        imageLabel.text = "Bild \(number) von 5"
         imagePopOverView.hidden = false
 
         let scale = CGAffineTransformMakeScale(0.3, 0.3)
@@ -228,6 +243,13 @@ class DetailViewController: UIViewController {
         print("URL: \(urlString)")
         let url = NSURL(string: urlString)
         recipeImage.hnk_setImageFromURL(url!)
+        
+        let label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "I'am a test label"
+        ingredientsSubView.addSubview(label)
+        //self.view.addSubview(label)
         
         
     }

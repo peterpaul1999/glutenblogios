@@ -527,6 +527,11 @@ Testkategorie</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BkF-Ma-yYh">
+                                <rect key="frame" x="10" y="308" width="300" height="250"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-SY-PQJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
@@ -619,8 +624,8 @@ Testkategorie</string>
                         <outlet property="imageLabel" destination="NsC-AL-sSa" id="kOy-sf-k29"/>
                         <outlet property="imagePopOverView" destination="PcL-cS-YsC" id="pzH-nl-xQJ"/>
                         <outlet property="ingredientsButton" destination="bQt-s2-JCy" id="RsO-Xz-ClZ"/>
+                        <outlet property="ingredientsSubView" destination="BkF-Ma-yYh" id="0Md-2L-VKB"/>
                         <outlet property="ingredientsTextView" destination="e3R-4c-35k" id="wtC-ko-guU"/>
-                        <outlet property="ingredientsView" destination="ifv-vk-Cqw" id="Fik-C4-OCt"/>
                         <outlet property="maskButton" destination="KuT-SY-PQJ" id="yc1-A0-WlJ"/>
                         <outlet property="panRecognizer" destination="FBP-yr-rbR" id="f00-M5-wf6"/>
                         <outlet property="popImageBlurView" destination="fDI-wb-9Yv" id="ffP-sq-DE2"/>

@@ -196,7 +196,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier == "detailSegue" {
             let toView = segue.destinationViewController as! DetailViewController
             let indexPath = self.tableView.indexPathForSelectedRow!
-            toView.recipe = datas[indexPath.row]
+            if(searchActive){
+                toView.recipe = filteredDatas[indexPath.row]
+            } else {
+                toView.recipe = datas[indexPath.row]
+            }
         }
     }
     
