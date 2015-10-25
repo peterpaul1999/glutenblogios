@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class DetailViewController: UIViewController {
     var number = 1
     
     var recipe: JSON!
+    var recipeIngredients: [JSON] = []
     
 
     @IBOutlet weak var recipeButton: UIButton!
@@ -149,7 +151,7 @@ class DetailViewController: UIViewController {
         ingredientsView.backgroundColor = middleBlue
         descriptionView.hidden = false
         preperationTextView.hidden = true
-        ingredientsTextView.hidden = true
+        ingredientsSubView.hidden = true
     }
     @IBAction func preperationButtonDidPress(sender: AnyObject) {
         preperationButton.hidden = true
@@ -160,7 +162,7 @@ class DetailViewController: UIViewController {
         ingredientsView.backgroundColor = middleBlue
         descriptionView.hidden = true
         preperationTextView.hidden = false
-        ingredientsTextView.hidden = true
+        ingredientsSubView.hidden = true
     }
     @IBAction func ingredientsButtonDidPress(sender: AnyObject) {
         preperationButton.hidden = false
@@ -171,7 +173,7 @@ class DetailViewController: UIViewController {
         ingredientsView.backgroundColor = darkBlue
         descriptionView.hidden = true
         preperationTextView.hidden = true
-        ingredientsTextView.hidden = false
+        ingredientsSubView.hidden = false
     }
     @IBAction func imagesButtonDidPress(sender: AnyObject) {
         number = 1
@@ -244,14 +246,46 @@ class DetailViewController: UIViewController {
         let url = NSURL(string: urlString)
         recipeImage.hnk_setImageFromURL(url!)
         
-        let label = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        label.center = CGPointMake(160, 284)
-        label.textAlignment = NSTextAlignment.Center
-        label.text = "I'am a test label"
-        ingredientsSubView.addSubview(label)
-        //self.view.addSubview(label)
+        createIngredients()
         
-        
+    }
+    
+    func createIngredients() {
+        let recipeId = recipe["id"].int!
+        let requestString = "http://localhost:8080/glutenblog-web/rest/recipeingredients/recipe/\(recipeId)"
+        Alamofire.request(.GET, requestString)
+            .responseJSON { response in
+                print("REQUEST")
+                print(response.request)  // original URL request
+                print("RESPONSE")
+                print(response.response) // URL response
+                print("DATA")
+                print(response.data)     // server data
+                print("RESULT")
+                print(response.result)   // result of response serialization
+                
+                let jsonData = JSON(response.result.value!)
+                
+                if let data = jsonData.arrayValue as [JSON]?{
+                    self.recipeIngredients = data
+                }
+                
+                print("Ingredients: \(self.recipeIngredients.count)")
+                var y : CGFloat = 15
+                for ingredient in self.recipeIngredients {
+                    print(ingredient["ingredient"]["name"].string!)
+                    let label = UILabel(frame: CGRectMake(0, 0, 300, 20))
+                    label.center = CGPointMake(155, y)
+                    label.textAlignment = NSTextAlignment.Left
+                    let ingredientText = "\(ingredient["number"].double!) \(ingredient["unit"]["name"].string!) \(ingredient["ingredient"]["name"].string!)"
+                    label.text = ingredientText
+                    label.font = UIFont(name: "AvenirNext-Regular", size: 14)
+                    label.textColor = UIColor(red: 62/255, green: 78/255, blue: 98/255, alpha: 1)
+                    self.ingredientsSubView.addSubview(label)
+                    y=y+50
+                }
+                
+        }
     }
 
     override func didReceiveMemoryWarning() {
