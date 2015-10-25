@@ -65,6 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.separatorColor = UIColor(red: 62/255, green: 78/255, blue: 98/255, alpha: 1)
         
         Alamofire.request(.GET, "http://localhost:8080/glutenblog-web/rest/recipe")
+            .validate()
             .responseJSON { response in
                 print("REQUEST")
                 print(response.request)  // original URL request
@@ -75,19 +76,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("RESULT")
                 print(response.result)   // result of response serialization
                 
-                let jsonData = JSON(response.result.value!)
-                
-                if let data = jsonData.arrayValue as [JSON]?{
-                    self.datas = data
-                    self.tableView.reloadData()
+                switch response.result {
+                case .Success:
+                    print("Validation Successful")
+                    let jsonData = JSON(response.result.value!)
+                    
+                    if let data = jsonData.arrayValue as [JSON]?{
+                        self.datas = data
+                        self.tableView.reloadData()
+                    }
+                    
+                    self.test = self.datas.count
+                    print("Zeilen1: \(self.test)")
+
+                case .Failure(let error):
+                    print(error)
+                    self.searchBar.hidden = true
+                    self.tableView.hidden = true
+                    let alertController = UIAlertController(title: "Fehler", message:
+                        "Der Server steht nicht zur Verfügung", preferredStyle: UIAlertControllerStyle.Alert)
+                    alertController.addAction(UIAlertAction(title: "Schließen", style: UIAlertActionStyle.Default,handler: nil))
+                    
+                    self.presentViewController(alertController, animated: true, completion: nil)
                 }
-                
-                self.test = self.datas.count
-                print("Zeilen1: \(self.test)")
-                //self.tableView.reloadData()
-                
-                
-                
         }
     }
 
