@@ -509,28 +509,23 @@ Testkategorie</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-4c-35k">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-Jo-itC">
                                 <rect key="frame" x="10" y="308" width="300" height="250"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-Ef-41r">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
+                                        <animations/>
+                                    </scrollView>
+                                </subviews>
                                 <animations/>
-                                <string key="text">0.5 Päckchen Trockenhefe
-
-800 g Brotmehl
-
-600 ml Wasser
-
-3 TL Salz
-
-1 EL Zucker
-
-1 EL Natron</string>
-                                <color key="textColor" red="0.24313725489999999" green="0.30588235289999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZX-aJ-yTG">
-                                <rect key="frame" x="10" y="308" width="300" height="250"/>
-                                <animations/>
-                            </scrollView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ffE-Ef-41r" firstAttribute="centerX" secondItem="6Oc-Jo-itC" secondAttribute="centerX" id="FAt-xE-V8d"/>
+                                    <constraint firstItem="ffE-Ef-41r" firstAttribute="height" secondItem="6Oc-Jo-itC" secondAttribute="height" id="Luj-sk-iAH"/>
+                                    <constraint firstItem="ffE-Ef-41r" firstAttribute="width" secondItem="6Oc-Jo-itC" secondAttribute="width" id="ePL-M0-tP2"/>
+                                    <constraint firstItem="ffE-Ef-41r" firstAttribute="centerY" secondItem="6Oc-Jo-itC" secondAttribute="centerY" id="udq-oI-rS8"/>
+                                </constraints>
+                            </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-SY-PQJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
@@ -586,21 +581,18 @@ Testkategorie</string>
                         <constraints>
                             <constraint firstItem="ivJ-Q6-Nep" firstAttribute="top" secondItem="y7b-1t-cId" secondAttribute="bottom" constant="10" id="1gv-DR-f01"/>
                             <constraint firstItem="156-O7-67b" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" constant="10" id="2IE-g6-FQf"/>
-                            <constraint firstItem="6ZX-aJ-yTG" firstAttribute="top" secondItem="Cbw-YN-0nS" secondAttribute="bottom" constant="10" id="2Pw-Tq-LnY"/>
                             <constraint firstAttribute="trailing" secondItem="Cbw-YN-0nS" secondAttribute="trailing" id="3sR-99-LAp"/>
                             <constraint firstItem="PcL-cS-YsC" firstAttribute="centerY" secondItem="P98-4S-TOj" secondAttribute="centerY" id="3zQ-sH-5Kg"/>
                             <constraint firstItem="555-py-uo4" firstAttribute="top" secondItem="ood-hq-rRu" secondAttribute="bottom" constant="1" id="51z-EI-fPa"/>
-                            <constraint firstItem="ivJ-Q6-Nep" firstAttribute="top" secondItem="e3R-4c-35k" secondAttribute="bottom" constant="10" id="DFb-BE-jdf"/>
-                            <constraint firstAttribute="trailing" secondItem="e3R-4c-35k" secondAttribute="trailing" constant="10" id="DLI-af-zVb"/>
                             <constraint firstItem="ifv-vk-Cqw" firstAttribute="leading" secondItem="555-py-uo4" secondAttribute="trailing" constant="1" id="Df9-VA-AEr"/>
                             <constraint firstItem="TzF-2U-X63" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" id="FMQ-uI-ESJ"/>
-                            <constraint firstItem="e3R-4c-35k" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" constant="10" id="FYT-rX-37B"/>
                             <constraint firstItem="PcL-cS-YsC" firstAttribute="centerX" secondItem="P98-4S-TOj" secondAttribute="centerX" id="FjZ-3S-sZt"/>
-                            <constraint firstAttribute="trailing" secondItem="6ZX-aJ-yTG" secondAttribute="trailing" constant="10" id="FnU-Pk-dqt"/>
+                            <constraint firstItem="6Oc-Jo-itC" firstAttribute="top" secondItem="Cbw-YN-0nS" secondAttribute="bottom" constant="10" id="KVk-b6-ltA"/>
                             <constraint firstItem="ivJ-Q6-Nep" firstAttribute="top" secondItem="156-O7-67b" secondAttribute="bottom" constant="10" id="KZh-dH-UcG"/>
                             <constraint firstItem="Cbw-YN-0nS" firstAttribute="top" secondItem="ood-hq-rRu" secondAttribute="bottom" constant="1" id="LkN-eW-SO1"/>
                             <constraint firstItem="ivJ-Q6-Nep" firstAttribute="top" secondItem="KuT-SY-PQJ" secondAttribute="bottom" id="May-az-UiK"/>
                             <constraint firstItem="156-O7-67b" firstAttribute="top" secondItem="Cbw-YN-0nS" secondAttribute="bottom" constant="10" id="NRQ-u6-z8p"/>
+                            <constraint firstItem="6Oc-Jo-itC" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" constant="10" id="Ndd-VE-R1V"/>
                             <constraint firstItem="TzF-2U-X63" firstAttribute="top" secondItem="P98-4S-TOj" secondAttribute="top" id="VGJ-Wj-ZBI"/>
                             <constraint firstItem="555-py-uo4" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" id="VWE-fG-5mn"/>
                             <constraint firstItem="ood-hq-rRu" firstAttribute="top" secondItem="TzF-2U-X63" secondAttribute="bottom" id="W9e-KP-0LM"/>
@@ -610,15 +602,14 @@ Testkategorie</string>
                             <constraint firstItem="y7b-1t-cId" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" constant="10" id="f08-c7-mfH"/>
                             <constraint firstItem="y7b-1t-cId" firstAttribute="top" secondItem="Cbw-YN-0nS" secondAttribute="bottom" constant="10" id="ftA-Ln-755"/>
                             <constraint firstItem="ood-hq-rRu" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" id="g1F-k1-hYF"/>
-                            <constraint firstItem="e3R-4c-35k" firstAttribute="top" secondItem="Cbw-YN-0nS" secondAttribute="bottom" constant="10" id="l5A-3T-phP"/>
+                            <constraint firstAttribute="trailing" secondItem="6Oc-Jo-itC" secondAttribute="trailing" constant="10" id="izD-lh-kYv"/>
                             <constraint firstAttribute="trailing" secondItem="TzF-2U-X63" secondAttribute="trailing" id="laV-QT-5dD"/>
                             <constraint firstItem="KuT-SY-PQJ" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" id="mhG-7d-TY8"/>
                             <constraint firstItem="Cbw-YN-0nS" firstAttribute="leading" secondItem="ifv-vk-Cqw" secondAttribute="trailing" constant="1" id="tbs-OF-MoR"/>
+                            <constraint firstItem="ivJ-Q6-Nep" firstAttribute="top" secondItem="6Oc-Jo-itC" secondAttribute="bottom" constant="10" id="tuI-x1-k4T"/>
                             <constraint firstItem="ifv-vk-Cqw" firstAttribute="top" secondItem="ood-hq-rRu" secondAttribute="bottom" constant="1" id="vFc-1Q-PlW"/>
                             <constraint firstAttribute="trailing" secondItem="y7b-1t-cId" secondAttribute="trailing" constant="10" id="xec-9r-ego"/>
                             <constraint firstAttribute="trailing" secondItem="KuT-SY-PQJ" secondAttribute="trailing" id="y37-DR-gs5"/>
-                            <constraint firstItem="ivJ-Q6-Nep" firstAttribute="top" secondItem="6ZX-aJ-yTG" secondAttribute="bottom" constant="10" id="yFI-Vc-Uiw"/>
-                            <constraint firstItem="6ZX-aJ-yTG" firstAttribute="leading" secondItem="P98-4S-TOj" secondAttribute="leading" constant="10" id="zas-KO-yxV"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -627,8 +618,8 @@ Testkategorie</string>
                         <outlet property="imageLabel" destination="NsC-AL-sSa" id="kOy-sf-k29"/>
                         <outlet property="imagePopOverView" destination="PcL-cS-YsC" id="pzH-nl-xQJ"/>
                         <outlet property="ingredientsButton" destination="bQt-s2-JCy" id="RsO-Xz-ClZ"/>
-                        <outlet property="ingredientsSubView" destination="6ZX-aJ-yTG" id="69B-wm-G5U"/>
-                        <outlet property="ingredientsTextView" destination="e3R-4c-35k" id="wtC-ko-guU"/>
+                        <outlet property="ingredientsSubView" destination="ffE-Ef-41r" id="rlt-2U-o4V"/>
+                        <outlet property="ingredientsTextView" destination="6Oc-Jo-itC" id="6W0-K0-S96"/>
                         <outlet property="ingredientsView" destination="ifv-vk-Cqw" id="zZp-AN-26O"/>
                         <outlet property="maskButton" destination="KuT-SY-PQJ" id="yc1-A0-WlJ"/>
                         <outlet property="panRecognizer" destination="FBP-yr-rbR" id="f00-M5-wf6"/>

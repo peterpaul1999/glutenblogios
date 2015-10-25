@@ -114,7 +114,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         cell.recipeName.text = data["name"].string
-        let imgString = data["imgBig"].string!
+        let imgString = data["imgSmall"].string!
         print("Image: \(imgString)")
         let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
         print("URL: \(urlString)")
@@ -182,6 +182,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             for var index = 0; index < datas.count; index++
             {
                 let data = datas[index]
+                
                 
                 let currentString = data["name"].string
                 if currentString!.lowercaseString.rangeOfString(searchText.lowercaseString)  != nil {

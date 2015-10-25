@@ -35,8 +35,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionView: UITextView!
     
     @IBOutlet weak var preperationTextView: UITextView!
-    
-    @IBOutlet weak var ingredientsTextView: UITextView!
+    @IBOutlet weak var ingredientsTextView: UIView!
+
     @IBOutlet weak var imagePopOverView: UIView!
     @IBOutlet weak var maskButton: UIButton!
     @IBOutlet weak var popUpImage: UIImageView!
@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var recipeTime: UILabel!
     @IBOutlet weak var recipeNumber: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var ingredientsSubView: UIView!
+    @IBOutlet weak var ingredientsSubView: UIScrollView!
     
     
     @IBOutlet var panRecognizer: UIPanGestureRecognizer!
@@ -151,7 +151,7 @@ class DetailViewController: UIViewController {
         ingredientsView.backgroundColor = middleBlue
         descriptionView.hidden = false
         preperationTextView.hidden = true
-        ingredientsSubView.hidden = true
+        ingredientsTextView.hidden = true
     }
     @IBAction func preperationButtonDidPress(sender: AnyObject) {
         preperationButton.hidden = true
@@ -162,7 +162,7 @@ class DetailViewController: UIViewController {
         ingredientsView.backgroundColor = middleBlue
         descriptionView.hidden = true
         preperationTextView.hidden = false
-        ingredientsSubView.hidden = true
+        ingredientsTextView.hidden = true
     }
     @IBAction func ingredientsButtonDidPress(sender: AnyObject) {
         preperationButton.hidden = false
@@ -173,7 +173,7 @@ class DetailViewController: UIViewController {
         ingredientsView.backgroundColor = darkBlue
         descriptionView.hidden = true
         preperationTextView.hidden = true
-        ingredientsSubView.hidden = false
+        ingredientsTextView.hidden = false
     }
     @IBAction func imagesButtonDidPress(sender: AnyObject) {
         number = 1
@@ -248,11 +248,13 @@ class DetailViewController: UIViewController {
         
         createIngredients()
         
+        
     }
     
     func createIngredients() {
         let recipeId = recipe["id"].int!
         let requestString = "http://localhost:8080/glutenblog-web/rest/recipeingredients/recipe/\(recipeId)"
+        var y : CGFloat = 5
         Alamofire.request(.GET, requestString)
             .responseJSON { response in
                 print("REQUEST")
@@ -271,20 +273,25 @@ class DetailViewController: UIViewController {
                 }
                 
                 print("Ingredients: \(self.recipeIngredients.count)")
-                var y : CGFloat = 15
+                
                 for ingredient in self.recipeIngredients {
                     print(ingredient["ingredient"]["name"].string!)
-                    let label = UILabel(frame: CGRectMake(0, 0, 300, 20))
-                    label.center = CGPointMake(155, y)
+                    let image = UIImage(named: "rectangle")
+                    let imageView = UIImageView(image: image!)
+                    imageView.frame = CGRect(x: 5, y: y+7, width: 5, height: 5)
+                    self.ingredientsSubView.addSubview(imageView)
+                    let label = UILabel(frame: CGRectMake(20, y, 300, 20))
+                    //label.center = CGPointMake(155, y)
                     label.textAlignment = NSTextAlignment.Left
                     let ingredientText = "\(ingredient["number"].double!) \(ingredient["unit"]["name"].string!) \(ingredient["ingredient"]["name"].string!)"
                     label.text = ingredientText
                     label.font = UIFont(name: "AvenirNext-Regular", size: 14)
                     label.textColor = UIColor(red: 62/255, green: 78/255, blue: 98/255, alpha: 1)
                     self.ingredientsSubView.addSubview(label)
-                    y=y+50
+                    y=y+30
                 }
-                
+                print("Y>>>: \(y)")
+                self.ingredientsSubView.contentSize.height = y
         }
     }
 
