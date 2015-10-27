@@ -62,9 +62,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         
         tableView.rowHeight = 101
-        tableView.separatorColor = UIColor(red: 62/255, green: 78/255, blue: 98/255, alpha: 1)
+        tableView.separatorColor = COLOR_GREY_BLUE
         
-        Alamofire.request(.GET, "http://localhost:8080/glutenblog-web/rest/recipe")
+        Alamofire.request(.GET, RECIPE_GET)
             .validate()
             .responseJSON { response in
                 print("REQUEST")
@@ -74,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("DATA")
                 print(response.data)     // server data
                 print("RESULT")
-                print(response.result)   // result of response serialization
+                print(response.result.value)   // result of response serialization
                 
                 switch response.result {
                 case .Success:
@@ -99,7 +99,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     self.presentViewController(alertController, animated: true, completion: nil)
                 }
+                
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,7 +129,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.recipeName.text = data["name"].string
         let imgString = data["imgSmall"].string!
         print("Image: \(imgString)")
-        let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
+        let urlString = "\(IMAGES_URL)\(imgString)"
         print("URL: \(urlString)")
         let url = NSURL(string: urlString)
         cell.recipeImage.hnk_setImageFromURL(url!)

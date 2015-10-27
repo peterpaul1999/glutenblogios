@@ -29,8 +29,8 @@ class CustomSearchBar: UISearchBar {
             //searchField.frame = CGRectMake(0.0, 0.0, frame.size.width - 0.0, frame.size.height - 0.0)
             
             // Set the font and text color of the search field.
-            searchField.font = UIFont(name: "AvenirNext-Regular", size: 18)
-            searchField.textColor = UIColor(red: 62/255, green: 78/255, blue: 98/255, alpha: 1)
+            searchField.font = FONT
+            searchField.textColor = COLOR_GREY_BLUE
             
             // Set the background color of the search field.
             searchField.backgroundColor = UIColor.whiteColor()

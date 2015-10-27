@@ -23,6 +23,7 @@
 		BAB398371BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB398351BC974DD00D9FFAE /* glutenblogPlay2.xcdatamodeld */; };
 		BAB398391BC974DD00D9FFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB398381BC974DD00D9FFAE /* Assets.xcassets */; };
 		BAB3983C1BC974DD00D9FFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB3983A1BC974DD00D9FFAE /* LaunchScreen.storyboard */; };
+		BAB85D6A1BDEA4560098B5AA /* globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB85D691BDEA4560098B5AA /* globals.swift */; };
 		BAC17DEF1BD6C73800A19332 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC17DEE1BD6C73800A19332 /* RecipeTableViewCell.swift */; };
 		BAC276AA1BDB9FDD00933621 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC276A11BDB9FA800933621 /* Alamofire.framework */; };
 		BAC276AB1BDB9FDD00933621 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BAC276A11BDB9FA800933621 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -154,6 +155,7 @@
 		BAB398381BC974DD00D9FFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB3983B1BC974DD00D9FFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB3983D1BC974DD00D9FFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB85D691BDEA4560098B5AA /* globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globals.swift; sourceTree = "<group>"; };
 		BAC17DEE1BD6C73800A19332 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		BAC276981BDB9FA700933621 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		BAC276AE1BDB9FFC00933621 /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = "../HanekeSwift-master/Haneke.xcodeproj"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				BA6FBF501BCD811C00ACC506 /* DetailViewController.swift */,
 				BA6B4E401BD1605900A04D0F /* Data.swift */,
 				BAC17DEE1BD6C73800A19332 /* RecipeTableViewCell.swift */,
+				BAB85D691BDEA4560098B5AA /* globals.swift */,
 			);
 			path = glutenblogPlay2;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				BA7BC63D1BCAC4A9008D2459 /* BlurView.swift in Sources */,
 				BA7BC6401BCAC4A9008D2459 /* Misc.swift in Sources */,
 				BA6B4E411BD1605900A04D0F /* Data.swift in Sources */,
+				BAB85D6A1BDEA4560098B5AA /* globals.swift in Sources */,
 				BA93BC271BCC2C7800A5BBB8 /* CustomBackwardSeque.swift in Sources */,
 				BAB3982F1BC974DC00D9FFAE /* AppDelegate.swift in Sources */,
 				BA93BC2B1BCC40F200A5BBB8 /* CustomSearchBar.swift in Sources */,

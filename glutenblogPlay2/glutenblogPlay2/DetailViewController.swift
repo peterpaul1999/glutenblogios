@@ -11,10 +11,6 @@ import Alamofire
 
 class DetailViewController: UIViewController {
     
-    var darkBlue = UIColor(red: 57/255, green: 111/255, blue: 175/255, alpha: 1)
-    var lightBlue = UIColor(red: 145/255, green: 184/255, blue: 231/255, alpha: 1)
-    var middleBlue = UIColor(red: 74/255, green: 143/255, blue: 226/255, alpha: 1)
-    
     var data = getData()
     var number = 1
     
@@ -146,9 +142,9 @@ class DetailViewController: UIViewController {
         preperationButton.hidden = false
         recipeButton.hidden = true
         ingredientsButton.hidden = false
-        preperationView.backgroundColor = lightBlue
-        recipeView.backgroundColor = darkBlue
-        ingredientsView.backgroundColor = middleBlue
+        preperationView.backgroundColor = COLOR_LIGHT_BLUE
+        recipeView.backgroundColor = COLOR_DARK_BLUE
+        ingredientsView.backgroundColor = COLOR_MIDDLE_BLUE
         descriptionView.hidden = false
         preperationTextView.hidden = true
         ingredientsTextView.hidden = true
@@ -157,9 +153,9 @@ class DetailViewController: UIViewController {
         preperationButton.hidden = true
         recipeButton.hidden = false
         ingredientsButton.hidden = false
-        preperationView.backgroundColor = darkBlue
-        recipeView.backgroundColor = lightBlue
-        ingredientsView.backgroundColor = middleBlue
+        preperationView.backgroundColor = COLOR_DARK_BLUE
+        recipeView.backgroundColor = COLOR_MIDDLE_BLUE
+        ingredientsView.backgroundColor = COLOR_LIGHT_BLUE
         descriptionView.hidden = true
         preperationTextView.hidden = false
         ingredientsTextView.hidden = true
@@ -168,9 +164,9 @@ class DetailViewController: UIViewController {
         preperationButton.hidden = false
         recipeButton.hidden = false
         ingredientsButton.hidden = true
-        preperationView.backgroundColor = middleBlue
-        recipeView.backgroundColor = lightBlue
-        ingredientsView.backgroundColor = darkBlue
+        preperationView.backgroundColor = COLOR_MIDDLE_BLUE
+        recipeView.backgroundColor = COLOR_LIGHT_BLUE
+        ingredientsView.backgroundColor = COLOR_DARK_BLUE
         descriptionView.hidden = true
         preperationTextView.hidden = true
         ingredientsTextView.hidden = false
@@ -180,7 +176,7 @@ class DetailViewController: UIViewController {
         //popUpImage.image = UIImage(named: data[number]["image"]!)
         let restString = "imgBig\(number)"
         let imgString = recipe[restString].string!
-        let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
+        let urlString = "\(IMAGES_URL)\(imgString)"
         print("URL: \(urlString)")
         let url = NSURL(string: urlString)
         popUpImage.hnk_setImageFromURL(url!)
@@ -241,7 +237,7 @@ class DetailViewController: UIViewController {
         preperationTextView.text = recipe["preperation"].string
         
         let imgString = recipe["imgBig"].string!
-        let urlString = "http://localhost:8080/glutenblog-web/resources/images/\(imgString)"
+        let urlString = "\(IMAGES_URL)\(imgString)"
         print("URL: \(urlString)")
         let url = NSURL(string: urlString)
         recipeImage.hnk_setImageFromURL(url!)
@@ -253,7 +249,7 @@ class DetailViewController: UIViewController {
     
     func createIngredients() {
         let recipeId = recipe["id"].int!
-        let requestString = "http://localhost:8080/glutenblog-web/rest/recipeingredients/recipe/\(recipeId)"
+        let requestString = "\(RECIPE_GET)\(recipeId)"
         var y : CGFloat = 5
         Alamofire.request(.GET, requestString)
             .responseJSON { response in
